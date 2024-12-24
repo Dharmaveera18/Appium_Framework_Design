@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-24T16:47:02 IST" name="Suite" finished-at="2024-12-24T16:49:55 IST" duration-ms="173286">
+    <groups>
+    </groups>
+    <test started-at="2024-12-24T16:47:02 IST" name="End to End Framework Test" finished-at="2024-12-24T16:48:47 IST" duration-ms="104883">
+      <class name="org.rahulshettyacademy.Ecommerce_tc_4">
+        <test-method is-config="true" signature="configAppium()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_4@4eb386df]" started-at="2024-12-24T16:47:02 IST" name="configAppium" finished-at="2024-12-24T16:47:52 IST" duration-ms="50051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAppium -->
+        <test-method is-config="true" signature="preSetUp()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_4@4eb386df]" started-at="2024-12-24T16:47:53 IST" name="preSetUp" finished-at="2024-12-24T16:47:53 IST" duration-ms="411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetUp -->
+        <test-method signature="fillForm(java.util.HashMap)[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_4@4eb386df]" started-at="2024-12-24T16:47:53 IST" name="fillForm" data-provider="getData" finished-at="2024-12-24T16:48:20 IST" duration-ms="26928" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Rahul shetty, country=Argentina, gender=female}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillForm -->
+        <test-method is-config="true" signature="preSetUp()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_4@4eb386df]" started-at="2024-12-24T16:48:20 IST" name="preSetUp" finished-at="2024-12-24T16:48:20 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetUp -->
+        <test-method signature="fillForm(java.util.HashMap)[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_4@4eb386df]" started-at="2024-12-24T16:48:20 IST" name="fillForm" data-provider="getData" finished-at="2024-12-24T16:48:46 IST" duration-ms="25857" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Rahul MR, country=Argentina, gender=male}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_4@4eb386df]" started-at="2024-12-24T16:48:46 IST" name="tearDown" finished-at="2024-12-24T16:48:47 IST" duration-ms="1047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.rahulshettyacademy.Ecommerce_tc_4 -->
+    </test> <!-- End to End Framework Test -->
+    <test started-at="2024-12-24T16:48:47 IST" name="Error Validations Test" finished-at="2024-12-24T16:49:55 IST" duration-ms="67946">
+      <class name="org.rahulshettyacademy.Ecommerce_tc_1">
+        <test-method is-config="true" signature="configAppium()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_1@331acdad]" started-at="2024-12-24T16:48:47 IST" name="configAppium" finished-at="2024-12-24T16:49:34 IST" duration-ms="46864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAppium -->
+        <test-method is-config="true" signature="preSetUp()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_1@331acdad]" started-at="2024-12-24T16:49:34 IST" name="preSetUp" finished-at="2024-12-24T16:49:35 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetUp -->
+        <test-method signature="fillForm_PositiveFlow()[pri:1, instance:org.rahulshettyacademy.Ecommerce_tc_1@331acdad]" started-at="2024-12-24T16:49:35 IST" name="fillForm_PositiveFlow" finished-at="2024-12-24T16:49:46 IST" duration-ms="11227" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at org.rahulshettyacademy.Ecommerce_tc_1.fillForm_PositiveFlow(Ecommerce_tc_1.java:73)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillForm_PositiveFlow -->
+        <test-method is-config="true" signature="preSetUp()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_1@331acdad]" started-at="2024-12-24T16:49:46 IST" name="preSetUp" finished-at="2024-12-24T16:49:46 IST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetUp -->
+        <test-method signature="fillForm_ErrorValidation()[pri:2, instance:org.rahulshettyacademy.Ecommerce_tc_1@331acdad]" started-at="2024-12-24T16:49:46 IST" name="fillForm_ErrorValidation" finished-at="2024-12-24T16:49:55 IST" duration-ms="8869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillForm_ErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.rahulshettyacademy.Ecommerce_tc_1@331acdad]" started-at="2024-12-24T16:49:55 IST" name="tearDown" finished-at="2024-12-24T16:49:55 IST" duration-ms="668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.rahulshettyacademy.Ecommerce_tc_1 -->
+    </test> <!-- Error Validations Test -->
+  </suite> <!-- Suite -->
+</testng-results>

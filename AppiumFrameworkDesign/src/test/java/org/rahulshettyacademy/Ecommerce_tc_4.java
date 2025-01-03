@@ -16,11 +16,11 @@ import org.testng.annotations.Test;
 public class Ecommerce_tc_4 extends BaseTest {
 	
 	
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData", groups= {"Smoke"})
 	public void fillForm(HashMap<String,String> input) throws MalformedURLException, URISyntaxException, InterruptedException
 	{
 		
-	   
+		 Thread.sleep(6000);
 	   formPage.setNameField(input.get("name"));
 	   formPage.setGender(input.get("gender"));
 	   formPage.setCountrySelection(input.get("country"));
@@ -59,7 +59,7 @@ public class Ecommerce_tc_4 extends BaseTest {
 //	   
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void preSetUp()
 	{
 		formPage.setActivity();

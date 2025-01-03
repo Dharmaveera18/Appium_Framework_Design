@@ -9,19 +9,48 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">End to End Framework Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">104,883</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Error Validations Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">67,946</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">172,829</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">End to End Framework Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">114,729</td><td>Smoke</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Error Validations Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td>Smoke</td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">114,730</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">End to End Framework Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.rahulshettyacademy.Ecommerce_tc_4</td><td><a href="#m0">fillForm</a></td><td rowspan="2">1735039100593</td><td rowspan="2">25857</td></tr><tr class="passedeven"><td><a href="#m1">fillForm</a></td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Error Validations Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.rahulshettyacademy.Ecommerce_tc_1</td><td><a href="#m2">fillForm_PositiveFlow</a></td><td rowspan="1">1735039175018</td><td rowspan="1">11227</td></tr><tr><th colspan="4">Error Validations Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.rahulshettyacademy.Ecommerce_tc_1</td><td><a href="#m3">fillForm_ErrorValidation</a></td><td rowspan="1">1735039186367</td><td rowspan="1">8869</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">End to End Framework Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.rahulshettyacademy.Ecommerce_tc_4</td><td><a href="#m0">fillForm</a></td><td rowspan="1">1735810754363</td><td rowspan="1">15217</td></tr><tr><th colspan="4">End to End Framework Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.rahulshettyacademy.Ecommerce_tc_4</td><td><a href="#m1">fillForm</a></td><td rowspan="1">1735810779828</td><td rowspan="1">32778</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4" class="invisible"/></tr></tbody>
 </table>
-<h2>End to End Framework Test</h2><h3 id="m0">org.rahulshettyacademy.Ecommerce_tc_4#fillForm</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Rahul MR, country=Argentina, gender=male}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.rahulshettyacademy.Ecommerce_tc_4#fillForm</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Rahul shetty, country=Argentina, gender=female}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Error Validations Test</h2><h3 id="m2">org.rahulshettyacademy.Ecommerce_tc_1#fillForm_PositiveFlow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at org.rahulshettyacademy.Ecommerce_tc_1.fillForm_PositiveFlow(Ecommerce_tc_1.java:73)
+<h2>End to End Framework Test</h2><h3 id="m0">org.rahulshettyacademy.Ecommerce_tc_4#fillForm</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Rahul shetty, country=Argentina, gender=female}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.id: com.androidsample.generalstore:id/nameField})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$fnYu4Qhn.sendKeys(Unknown Source)
+	at org.rahulshettyacademy.pageObjects.android.FormPage.setNameField(FormPage.java:49)
+	at org.rahulshettyacademy.Ecommerce_tc_4.fillForm(Ecommerce_tc_4.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">org.rahulshettyacademy.Ecommerce_tc_1#fillForm_ErrorValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-</body>
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@39f5b723 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 33 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: com.androidsample.generalstore:id/nameField})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 35 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.rahulshettyacademy.Ecommerce_tc_4#fillForm</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{name=Rahul MR, country=Argentina, gender=male}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Error Validations Test</h2></body>
 </html>

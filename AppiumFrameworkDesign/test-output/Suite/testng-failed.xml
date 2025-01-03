@@ -4,16 +4,21 @@
   <listeners>
     <listener class-name="org.rahulshettyacademy.TestUtils.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Error Validations Test(failed)">
+  <test thread-count="5" name="End to End Framework Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="org.rahulshettyacademy.Ecommerce_tc_1">
+      <class name="org.rahulshettyacademy.Ecommerce_tc_4">
         <methods>
+          <include name="fillForm" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="preSetUp"/>
           <include name="configAppium"/>
-          <include name="fillForm_PositiveFlow"/>
+          <include name="preSetUp"/>
         </methods>
-      </class> <!-- org.rahulshettyacademy.Ecommerce_tc_1 -->
+      </class> <!-- org.rahulshettyacademy.Ecommerce_tc_4 -->
     </classes>
-  </test> <!-- Error Validations Test(failed) -->
+  </test> <!-- End to End Framework Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

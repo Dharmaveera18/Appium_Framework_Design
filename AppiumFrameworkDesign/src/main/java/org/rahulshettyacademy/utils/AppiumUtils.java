@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -58,4 +60,17 @@ public class AppiumUtils {
 		  
 		  return service;
 	}
+	
+	
+	public String screenShotPath(String testCaseName, AppiumDriver driver) throws IOException
+	{
+		File source = driver.getScreenshotAs(OutputType.FILE); //This is in raw format in local machine
+		String destinationFileName = System.getProperty("user.dir")+ "//reports" + testCaseName + ".png";
+		FileUtils.copyFile(source, new File(destinationFileName));
+		
+		return destinationFileName;
+		
+	}
+	
+	
 }

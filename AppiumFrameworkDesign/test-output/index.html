@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\dharmaveerah\eclipse-workspace\AppiumFrameworkDesign\testng.xml</span>
+                    <span>C:\Users\dharmaveerah\git\repository2\AppiumFrameworkDesign\testng_Smoke.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.rahulshettyacademy.Ecommerce_tc_1" class="method navigator-link" hash-for-method="fillForm_PositiveFlow">fillForm_PositiveFlow</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="org.rahulshettyacademy.Ecommerce_tc_4" class="method navigator-link" hash-for-method="fillForm({name=Rahul shetty, country=Argentina, gender=female})">fillForm({name=Rahul shetty, country=Argentina, gender=female})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -118,16 +118,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="org.rahulshettyacademy.Ecommerce_tc_4" class="method navigator-link" hash-for-method="fillForm({name=Rahul MR, country=Argentina, gender=male})">fillForm({name=Rahul MR, country=Argentina, gender=male})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.rahulshettyacademy.Ecommerce_tc_4" class="method navigator-link" hash-for-method="fillForm({name=Rahul shetty, country=Argentina, gender=female})">fillForm({name=Rahul shetty, country=Argentina, gender=female})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.rahulshettyacademy.Ecommerce_tc_1" class="method navigator-link" hash-for-method="fillForm_ErrorValidation">fillForm_ErrorValidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -145,18 +135,50 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">org.rahulshettyacademy.Ecommerce_tc_1</span>
+              <span class="class-name">org.rahulshettyacademy.Ecommerce_tc_4</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="fillForm_PositiveFlow">
-                  </a> <!-- fillForm_PositiveFlow -->
-                  <span class="method-name">fillForm_PositiveFlow</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at org.rahulshettyacademy.Ecommerce_tc_1.fillForm_PositiveFlow(Ecommerce_tc_1.java:73)
+                  <a name="fillForm({name=Rahul shetty, country=Argentina, gender=female})">
+                  </a> <!-- fillForm({name=Rahul shetty, country=Argentina, gender=female}) -->
+                  <span class="method-name">fillForm</span>
+                  <span class="parameters">({name=Rahul shetty, country=Argentina, gender=female})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.id: com.androidsample.generalstore:id/nameField})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$fnYu4Qhn.sendKeys(Unknown Source)
+	at org.rahulshettyacademy.pageObjects.android.FormPage.setNameField(FormPage.java:49)
+	at org.rahulshettyacademy.Ecommerce_tc_4.fillForm(Ecommerce_tc_4.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@39f5b723 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
+	... 33 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: com.androidsample.generalstore:id/nameField})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 35 more
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -176,41 +198,28 @@
                   <span class="parameters">({name=Rahul MR, country=Argentina, gender=male})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillForm({name=Rahul shetty, country=Argentina, gender=female})">
-                  </a> <!-- fillForm({name=Rahul shetty, country=Argentina, gender=female}) -->
-                  <span class="method-name">fillForm</span>
-                  <span class="parameters">({name=Rahul shetty, country=Argentina, gender=female})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">org.rahulshettyacademy.Ecommerce_tc_1</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillForm_ErrorValidation">
-                  </a> <!-- fillForm_ErrorValidation -->
-                  <span class="method-name">fillForm_ErrorValidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dharmaveerah\eclipse-workspace\AppiumFrameworkDesign\testng.xml</span>
+            <span class="header-content">C:\Users\dharmaveerah\git\repository2\AppiumFrameworkDesign\testng_Smoke.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;Smoke&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;Smoke&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.rahulshettyacademy.TestUtils.Listeners&quot;/&gt;
   &lt;/listeners&gt;
@@ -248,6 +257,14 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">fillForm</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -264,28 +281,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'fillForm')
 data.setCell(0, 2, 'org.rahulshettyacademy.Ecommerce_tc_4')
-data.setCell(0, 3, 26928);
+data.setCell(0, 3, 32778);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'fillForm')
 data.setCell(1, 2, 'org.rahulshettyacademy.Ecommerce_tc_4')
-data.setCell(1, 3, 25857);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'fillForm_PositiveFlow')
-data.setCell(2, 2, 'org.rahulshettyacademy.Ecommerce_tc_1')
-data.setCell(2, 3, 11227);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'fillForm_ErrorValidation')
-data.setCell(3, 2, 'org.rahulshettyacademy.Ecommerce_tc_1')
-data.setCell(3, 3, 8869);
+data.setCell(1, 3, 15217);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -300,9 +309,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">org.rahulshettyacademy.Ecommerce_tc_1</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">fillForm_ErrorValidation</span>
+                <br/>
+                <span class="ignored-method-name">fillForm_PositiveFlow</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -318,52 +336,25 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">preSetUp</span>
-                <span class="method-start">50457 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">fillForm({name=Rahul shetty, country=Argentina, gender=female})</span>
-                <span class="method-start">50869 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">preSetUp</span>
-                <span class="method-start">77809 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">fillForm({name=Rahul MR, country=Argentina, gender=male})</span>
-                <span class="method-start">77954 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">103814 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.rahulshettyacademy.Ecommerce_tc_1</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">configAppium</span>
-                <span class="method-start">105322 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">preSetUp</span>
-                <span class="method-start">152187 ms</span>
+                <span class="method-start">55175 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">fillForm_PositiveFlow</span>
-                <span class="method-start">152379 ms</span>
+                <span class="method-name">fillForm({name=Rahul shetty, country=Argentina, gender=female})</span>
+                <span class="method-start">55761 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">preSetUp</span>
-                <span class="method-start">163613 ms</span>
+                <span class="method-start">79873 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">fillForm_ErrorValidation</span>
-                <span class="method-start">163728 ms</span>
+                <span class="method-name">fillForm({name=Rahul MR, country=Argentina, gender=male})</span>
+                <span class="method-start">81226 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">172598 ms</span>
+                <span class="method-start">114009 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

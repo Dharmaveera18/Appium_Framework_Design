@@ -36,12 +36,12 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class BaseTest extends AppiumUtils{
-	public AndroidDriver driver;
+	public static AndroidDriver driver;
 	public AppiumDriverLocalService service;
 	public FormPage formPage;
 	
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void configAppium() throws InterruptedException, URISyntaxException, IOException
 	{
 		
@@ -56,16 +56,16 @@ public class BaseTest extends AppiumUtils{
 		       //How to start appium server programmatically
 		         service = startAppiumServer(IPAdress, Integer.parseInt(port));
 				 Thread.sleep(10000);
-				// service.start();
+				 service.start();
 				
 				 Thread.sleep(10000);
 				 UiAutomator2Options options = new UiAutomator2Options();
 				 options.setChromedriverExecutable("/Users/dharmaveerah/Chrome_Drivers/chromedriver_win32/chromedriver.exe");
 				 
-				 //options.setDeviceName("myavd1");
+				 options.setDeviceName("Dharma_AVD");
 				 //options.setDeviceName("Rahulemulator1");
 				  //options.setDeviceName("Medium_AVD");
-				  options.setDeviceName("MyNewAVD");
+				 // options.setDeviceName("MyNewAVD");
 				 Thread.sleep(10000);
 				 options.setApp(System.getProperty("user.dir") + "//src//test//java//org//rahulshettyacademy//resources//General-Store.apk");
 				 //options.setApp("/Users/dharmaveerah/eclipse-workspace/Appium/src/test/java/resources/ApiDemos-debug.apk");
@@ -154,7 +154,7 @@ public class BaseTest extends AppiumUtils{
 	    return price; 
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown()
 	{
 		//How to stop appium server programmatically
